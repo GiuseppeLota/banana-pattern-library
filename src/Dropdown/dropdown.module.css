@@ -1,0 +1,41 @@
+/*
+*   Dropdown
+*/
+
+.ui_dropdown > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+ 
+ .ui_dropdown > label {
+   color: white;
+   cursor: pointer;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   user-select: none
+ }
+ 
+ .ui_dropdown > label:hover {
+   border-color: #333;
+ }
+ 
+ .ui_dropdown > ul {
+   position: absolute;
+   left: -100vw;
+   top: calc(1.5em + 14px);
+   background: #fff;
+   padding: 6px 0;
+   list-style: none;
+   width: 100%;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+   -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+   box-shadow: 0 3px 8px rgba(0,0,0,.15);
+ }
+ 
+ .ui_dropdown > input[type="checkbox"]:checked ~ ul{
+   left: 0;
+ }

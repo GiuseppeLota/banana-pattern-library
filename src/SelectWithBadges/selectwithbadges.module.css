@@ -1,0 +1,15 @@
+.badges_container{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline-flex;
+    padding-left: 0.5rem;
+}
+
+.badges_container span:not(:last-child){
+    margin-right: 0.6rem;
+}
+
+
+.bg_delete_cat{
+    cursor: pointer;
+}

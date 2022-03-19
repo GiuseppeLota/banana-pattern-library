@@ -1,0 +1,3 @@
+.inputSuggestion ul li:hover{
+  background-color: var(--bs-info);
+}
