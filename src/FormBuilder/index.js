@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import SelectWithBadges from '../SelectWithBadges';
-import InputWithSuggestion from '../InputWithSuggestion';
+import { InputWithSuggestion } from '../InputWithSuggestion';
 
-export default function BaseForm(props) {
+export function FormBuilder (props){
 
     const [uploadFiles, setUploadFiles] = useState([]);
 

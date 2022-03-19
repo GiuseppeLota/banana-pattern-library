@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styles from './popup.module.css'
 
-export default function Popup({ TriggerButton, Body, Title, id, closeFn }) {
+export function Popup({ TriggerButton, Body, Title, id, closeFn }) {
 
     const closeBtn = useRef();
 

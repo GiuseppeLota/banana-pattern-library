@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from './selectwithbadges.module.css'
 
 
-export default function SelectWithBadges(props) {
+export function SelectWithBadges(props) {
 
     const register = props.registerFn
     const setValue = props.setValueFn

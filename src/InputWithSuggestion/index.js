@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react'
 import { Debounce } from '../Util'
 import styles from './inputwithsuggestion.module.css'
 
-export default function InputWithSuggestion(props) {
+export function InputWithSuggestion (props) {
 
     const [suggestions, setSuggestions] = useState([])
     const [selectedSuggestion, setSelectedSuggestion] = useState({})

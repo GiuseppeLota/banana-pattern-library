@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styles from './dropdown.module.css'
 
-export default function Dropdown({ title, items, id, rootClassName, liClassName, ulClassName, labelClassName }) {
+export function Dropdown({ title, items, id, rootClassName, liClassName, ulClassName, labelClassName }) {
 
     const divRef = useRef()
 
