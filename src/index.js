@@ -4,4 +4,4 @@ import { InputWithSuggestion } from './InputWithSuggestion'
 import { Popup } from './Popup'
 import { SelectWithBadges } from './SelectWithBadges'
 
-export { FormBuilder, Dropdown, FormBuilder, InputWithSuggestion, Popup, SelectWithBadges }
+export { FormBuilder, Dropdown, InputWithSuggestion, Popup, SelectWithBadges }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './selectwithbadges.module.css'
 
-
 export function SelectWithBadges(props) {
 
     const register = props.registerFn

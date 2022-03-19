@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import SelectWithBadges from '../SelectWithBadges';
+import { SelectWithBadges } from '../SelectWithBadges';
 import { InputWithSuggestion } from '../InputWithSuggestion';
 
 export function FormBuilder (props){
