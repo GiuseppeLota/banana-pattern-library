@@ -1,7 +1,7 @@
 import { FormBuilder } from './FormBuilder'
 import { Dropdown } from './Dropdown'
 import { InputWithSuggestion } from './InputWithSuggestion'
-import { Popup } from './Popup'
+import { Popup, closePopup } from './Popup'
 import { SelectWithBadges } from './SelectWithBadges'
 
-export { FormBuilder, Dropdown, InputWithSuggestion, Popup, SelectWithBadges }
+export { FormBuilder, Dropdown, InputWithSuggestion, Popup, closePopup, SelectWithBadges }
