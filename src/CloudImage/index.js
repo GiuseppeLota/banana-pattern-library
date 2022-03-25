@@ -1,7 +1,7 @@
 import React from 'react'
 import { UrlFor } from './urlBuilder'
 
-export default function CloudImage({ publicId, className }) {
+export function CloudImage({ publicId, className }) {
 
     const imageUri = UrlFor(publicId)
 
