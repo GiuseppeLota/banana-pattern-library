@@ -24,7 +24,7 @@ export function Dropdown({ title, items, id, rootClassName, liClassName, ulClass
     return (
         <div className={`dropdown ${styles.ui_dropdown} ${rootClassName}`} ref={divRef}>
             <input id={id} name="my-checkbox" type="checkbox" value="" />
-            <label className={`nav-link ${labelClassName}`} data-toggle="dropdown" htmlFor={id}>
+            <label className={`${labelClassName}`} data-toggle="dropdown" htmlFor={id}>
                 {title}
             </label>
             <ul className={ulClassName}>
