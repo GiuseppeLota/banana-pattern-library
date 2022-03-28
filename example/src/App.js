@@ -6,7 +6,7 @@ import 'banana-pattern-library/dist/index.css'
 const App = () => {
   return (
     <div>
-      <Multileveldropdown />
+      <Multileveldropdown id={'drp_test'} />
       <CloudImage publicId='fabbro_rzi1bl' />
     </div>
   )

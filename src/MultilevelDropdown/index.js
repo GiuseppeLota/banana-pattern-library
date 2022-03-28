@@ -1,10 +1,15 @@
 import React from 'react'
 import styles from './multileveldropdown.module.css'
 
-export function Multileveldropdown({ lblClass }) {
+export function Multileveldropdown({ lblClass, containerClass, id }) {
+
+    const mouseLeaveFn = () => {
+        document.getElementById(id).children[1].checked = false
+    }
+
     return (
-        <div className={styles.drp_container}>
-            <label htmlFor="lbl" className={lblClass}>
+        <div className={containerClass} style={{ 'position': 'absolute' }} onMouseLeave={mouseLeaveFn} id={id}>
+            <label htmlFor="lbl" className={`${styles.drp_label} ${lblClass} `}>
                 label
             </label>
             <input type="checkbox" id="lbl" />

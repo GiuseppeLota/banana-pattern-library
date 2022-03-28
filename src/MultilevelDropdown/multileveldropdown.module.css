@@ -1,9 +1,5 @@
-.drp_container{
-    display: block;
-    position: absolute;
-}
 
-label{
+.drp_label{
     user-select: none;
     cursor: pointer;
     padding: 0.5rem 1rem;
