@@ -1,0 +1,72 @@
+.drp_container{
+    display: block;
+    position: absolute;
+}
+
+label{
+    user-select: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #1bc2a2;
+}
+
+ul li{
+    position: relative;
+}
+
+ul {
+    display: none;
+}
+
+ul li a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+}
+
+ul li a:hover {
+    background: #2c3e50;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+}
+
+input:checked+ul, li:hover>ul {
+    display: block;
+    position: absolute;
+}
+
+li:hover a {
+    background: #1bc2a2;
+}
+
+li:hover li a:hover {
+    background: #2c3e50;
+}
+
+ul ul {
+    left: 100%;
+    top: 0;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+ul:after {
+    clear: both;
+}
