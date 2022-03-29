@@ -52,24 +52,8 @@ li:hover li a:hover {
     background: #2c3e50;
 }
 
-ul:before,
-ul:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-}
-
-ul:after {
-    clear: both;
-}
-
-
 /* checkbox styles */
 
 input[type="checkbox"]{
     appearance: none;
 }
-
-
-
