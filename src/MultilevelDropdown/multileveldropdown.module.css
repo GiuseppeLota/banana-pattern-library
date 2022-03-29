@@ -35,7 +35,7 @@
 }
 
 /* list appareance */
-input:checked+ul, li:hover>ul {
+input:checked+ul.drp_ul, li:hover>ul.drp_ul {
     display: block;
     position: absolute;
 }
@@ -54,6 +54,6 @@ input:checked+ul, li:hover>ul {
 
 /* checkbox styles */
 
-input[type="checkbox"]{
+.drp_ul input[type="checkbox"]{
     appearance: none;
 }
