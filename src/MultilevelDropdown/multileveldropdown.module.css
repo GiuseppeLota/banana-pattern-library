@@ -11,14 +11,12 @@ ul {
     padding: 0;
     margin: 0;
     background: #1bc2a2;
+    display: none;
 }
 
 ul li{
     position: relative;
-}
-
-ul {
-    display: none;
+    cursor: pointer;
 }
 
 ul li a {
@@ -29,17 +27,21 @@ ul li a {
     color: #fff;
 }
 
-ul li a:hover {
-    background: #2c3e50;
+
+/* list disappearance */
+ul ul {
+    left: 100%;
+    top: 0;
 }
 
-input[type="checkbox"]{
-    appearance: none;
-}
-
+/* list appareance */
 input:checked+ul, li:hover>ul {
     display: block;
     position: absolute;
+}
+
+ul li a:hover {
+    background: #2c3e50;
 }
 
 li:hover a {
@@ -48,11 +50,6 @@ li:hover a {
 
 li:hover li a:hover {
     background: #2c3e50;
-}
-
-ul ul {
-    left: 100%;
-    top: 0;
 }
 
 ul:before,
@@ -66,3 +63,13 @@ ul:after {
 ul:after {
     clear: both;
 }
+
+
+/* checkbox styles */
+
+input[type="checkbox"]{
+    appearance: none;
+}
+
+
+
