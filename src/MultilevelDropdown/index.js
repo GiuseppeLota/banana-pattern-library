@@ -13,12 +13,12 @@ export function Multileveldropdown({ lblClass, containerClass, id, label, items 
                 {label}
             </label>
             <input type="checkbox" id={`lbl${id}`}/>
-            <ul>
+            <ul className={styles.drp_ul}>
                 {
                     items.map(item => {
                         return (<li key={item.code}>
                             <a> {item.label}</a>
-                            <ul>
+                            <ul className={styles.drp_ul}>
                                 {
                                     item.subItems.map(subItem => {
                                         return (

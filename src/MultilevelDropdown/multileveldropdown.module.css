@@ -6,7 +6,7 @@
     display: inline-block;
 }
 
-ul {
+.drp_ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -14,12 +14,12 @@ ul {
     display: none;
 }
 
-ul li{
+.drp_ul li{
     position: relative;
     cursor: pointer;
 }
 
-ul li a {
+.drp_ul li a {
     display: block;
     padding: 1em;
     text-decoration: none;
@@ -29,7 +29,7 @@ ul li a {
 
 
 /* list disappearance */
-ul ul {
+.drp_ul ul {
     left: 100%;
     top: 0;
 }
@@ -40,15 +40,15 @@ input:checked+ul, li:hover>ul {
     position: absolute;
 }
 
-ul li a:hover {
+.drp_ul li a:hover {
     background: #2c3e50;
 }
 
-li:hover a {
+.drp_ul li:hover a {
     background: #1bc2a2;
 }
 
-li:hover li a:hover {
+.drp_ul li:hover li a:hover {
     background: #2c3e50;
 }
 
