@@ -12,6 +12,7 @@
     margin: 0;
     background: #1bc2a2;
     display: none;
+    z-index: 1;
 }
 
 .drp_ul li{
