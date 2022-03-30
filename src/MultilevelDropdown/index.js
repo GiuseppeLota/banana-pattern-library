@@ -8,7 +8,7 @@ export function Multileveldropdown({ lblClass, containerClass, id, label, items 
     }
 
     return (
-        <div className={containerClass} style={{ 'position': 'absolute' }} onMouseLeave={mouseLeaveFn} id={id}>
+        <div className={containerClass} onMouseLeave={mouseLeaveFn} id={id}>
             <label htmlFor={`lbl${id}`} className={`${styles.drp_label} ${lblClass} `}>
                 {label}
             </label>
