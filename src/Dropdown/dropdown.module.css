@@ -38,6 +38,6 @@
    z-index: 1;
  }
  
- .ui_dropdown ~ input[type="checkbox"]:checked ~ ul{
+ .ui_dropdown input[type="checkbox"]:checked ~ ul{
    left: 0;
  }

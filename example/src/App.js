@@ -1,5 +1,5 @@
 import React from 'react'
-import { CloudImage, Multileveldropdown } from 'banana-pattern-library'
+import { CloudImage, Multileveldropdown, Dropdown } from 'banana-pattern-library'
 
 import 'banana-pattern-library/dist/index.css'
 
@@ -45,7 +45,15 @@ const App = () => {
 
   return (
     <div>
-      <Multileveldropdown id={'drp_test'} label='test' items={items}/>
+      <Multileveldropdown id={'drp_test'} label='test' items={items} />
+      <Dropdown
+        id={'drp_simple_id'}
+        title={`move`}
+        items={[
+          <span>ffdf</span>,
+          <span>sdsd</span>
+        ]}
+      />
       <CloudImage publicId='fabbro_rzi1bl' />
     </div>
   )
