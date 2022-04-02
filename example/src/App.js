@@ -12,7 +12,8 @@ const App = () => {
       subItems: [
         {
           label: 'sub element 1',
-          code: 'sub code1'
+          code: 'sub code1',
+          onClick: () => { console.log('miao') }
         }
       ]
     },
@@ -44,16 +45,22 @@ const App = () => {
 
 
   return (
-    <div>
-      <Multileveldropdown id={'drp_test'} label='test' items={items} />
-      <Dropdown
-        id={'drp_simple_id'}
-        title={`move`}
-        items={[
-          <span>ffdf</span>,
-          <span>sdsd</span>
-        ]}
-      />
+    <div className='container'>
+      <div className='row'>
+        <div className='col-4'>
+          <Multileveldropdown id={'drp_test'} label='test' items={items} />
+        </div>
+        <div className='col-4 offset-5'>
+          <Dropdown id={'drp_simple_id'}
+            title={`move`}
+            items={[
+              <span>ffdf</span>,
+              <span>sdsd</span>
+            ]}
+          />
+        </div>
+      </div>
+
       <CloudImage publicId='fabbro_rzi1bl' />
     </div>
   )

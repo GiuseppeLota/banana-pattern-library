@@ -12,24 +12,28 @@ export function Multileveldropdown({ lblClass, containerClass, id, label, items 
             <label htmlFor={`lbl${id}`} className={`${styles.drp_label} ${lblClass} `}>
                 {label}
             </label>
-            <input type="checkbox" id={`lbl${id}`}/>
+            <input type="checkbox" id={`lbl${id}`} />
             <ul className={styles.drp_ul}>
                 {
                     items.map(item => {
-                        return (<li key={item.code}>
-                            <a> {item.label}</a>
-                            <ul className={styles.drp_ul}>
-                                {
-                                    item.subItems.map(subItem => {
-                                        return (
-                                            <li key={subItem.code}>
-                                                <a> {subItem.label}</a>
-                                            </li>
-                                        )
-                                    })
-                                }
-                            </ul>
-                        </li>)
+                        return (
+                            <li key={item.code}>
+                                <a> {item.label}</a>
+                                <ul className={styles.drp_ul}>
+                                    {
+                                        item.subItems.map(subItem => {
+
+                                            const clickHandler = subItem.onClick ?? function () { }
+
+                                            return (
+                                                <li key={subItem.code} onClick={clickHandler}>
+                                                    <a> {subItem.label}</a>
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </li>)
                     })
                 }
 
