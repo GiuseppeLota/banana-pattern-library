@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { SelectWithBadges } from '../SelectWithBadges';
 import { InputWithSuggestion } from '../InputWithSuggestion';
 
-export function FormBuilder (props){
+export function FormBuilder(props) {
 
     const [uploadFiles, setUploadFiles] = useState([]);
 
@@ -35,8 +35,10 @@ export function FormBuilder (props){
             case 'select':
                 return (
                     <div className='col-sm-4 '>
-                        <select className="form-select" {...register(field.name, { required: field.required })}>
-                            <option></option>
+                        <select className="form-select" defaultValue={'default'} {...register(field.name, { required: field.required })}>
+                            <option value={'default'} disabled>
+                                {field.placeholder || 'Choose an option'}
+                            </option>
                             {
                                 field.items.map(item => {
                                     return <option key={item.id} value={item.value}>{item.value}</option>

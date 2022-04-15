@@ -10,7 +10,7 @@ export function SelectWithBadges(props) {
 
     useEffect(() => {
         if (props.value) {
-            setValue(props.name, props.value[props.value.length -1])
+            setValue(props.name, props.value[props.value.length - 1])
             setElements(props.value)
         }
     }, [])
@@ -28,22 +28,24 @@ export function SelectWithBadges(props) {
         const valueToDelete = e.target.parentElement.lastChild.innerText
 
         updatedElements.splice(updatedElements.indexOf(valueToDelete), 1)
-        
+
         setElements(updatedElements)
     }
 
     useEffect(() => {
-        setValue(props.name, elements[0])
+        setValue(props.name, elements[0] ?? "default")
     }, [elements])
 
     return (
         <>
-            <select className="form-select" aria-label="Default select example" defaultValue="" {...register(props.name, { required: props.required, setValueAs: () => elements })} onChange={(e) => addElement(e)}>
-                <option value=""></option>
+            <select className="form-select" defaultValue={'default'} {...register(props.name, { required: props.required, setValueAs: () => elements })} onChange={(e) => addElement(e)}>
+                <option value={'default'} disabled>
+                    {'Choose an option'}
+                </option>
                 {
-                  props.items.map(item =>{
-                      return <option key={item.id} value={item.value}>{item.value}</option>
-                  })
+                    props.items.map(item => {
+                        return <option key={item.id} value={item.value}>{item.value}</option>
+                    })
                 }
             </select>
             <div className={`${styles.badges_container} col-sm-4`}>
