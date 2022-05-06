@@ -21,14 +21,14 @@ export function FormBuilder(props) {
         switch (field.type) {
             case 'text':
                 return (
-                    <div className="col-sm-9 text-secondary">
+                    <div className="col-sm-8 text-secondary">
                         <input type="text" className="form-control" placeholder={field.placeholder} {...register(field.name, { required: field.required })} />
                         {errors[field.name] && <span>This field is required</span>}
                     </div>
                 )
             case 'textWithSuggestion':
                 return (
-                    <div className="col-sm-9 text-secondary">
+                    <div className="col-sm-8 text-secondary">
                         <InputWithSuggestion registerFn={register} setValueFn={setValue} getValuesFn={getValues} {...field} />
                     </div>
                 )
@@ -37,11 +37,11 @@ export function FormBuilder(props) {
                     <div className='col-sm-4 '>
                         <select className="form-select" defaultValue={'default'} {...register(field.name, { required: field.required })}>
                             <option value={'default'} disabled>
-                                {field.placeholder || 'Choose an option'}
+                                { field.placeholder || 'Choose an option'}
                             </option>
                             {
                                 field.items.map(item => {
-                                    return <option key={item.id} value={item.value}>{item.value}</option>
+                                    return <option key={item.id} value={item.id}>{item.value}</option>
                                 })
                             }
                         </select>
@@ -93,7 +93,7 @@ export function FormBuilder(props) {
                 props.fields.map((field, index) => {
                     return (
                         <div key={index} className="row mb-3">
-                            <div className="col-sm-3">
+                            <div className="col-sm-4">
                                 <h6 className="mb-0">{field.label}</h6>
                                 {
                                     field.subLabel
