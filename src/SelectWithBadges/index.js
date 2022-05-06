@@ -10,8 +10,11 @@ export function SelectWithBadges(props) {
 
     useEffect(() => {
         if (props.value) {
-            setValue(props.name, props.value[props.value.length - 1])
-            setElements(props.value)
+
+            const selectedValues = props.value.map(val => { return { id: val, key: props.items.find(it => it.value === val).key } })
+
+            setValue(props.name, selectedValues[props.value.length - 1])
+            setElements(selectedValues)
         }
     }, [])
 
