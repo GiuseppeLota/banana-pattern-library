@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './selectwithbadges.module.css'
 
+
 export function SelectWithBadges(props) {
 
     const register = props.registerFn
@@ -10,8 +11,7 @@ export function SelectWithBadges(props) {
 
     useEffect(() => {
         if (props.value) {
-
-            const selectedValues = props.value.map(val => { return { id: val, key: props.items.find(it => it.value === val).key } })
+            const selectedValues = props.value.map(val => { return { value: val, id: props.items.find(it => it.value === val).id } })
 
             setValue(props.name, selectedValues[props.value.length - 1])
             setElements(selectedValues)
@@ -19,9 +19,13 @@ export function SelectWithBadges(props) {
     }, [])
 
     function addElement(e) {
-        const value = e.target.value
+        const id = e.target.value
+
+        const selectedIndex = e.target.selectedIndex
+        const value = e.target.options[selectedIndex].innerHTML
+
         if (elements.indexOf(value) === -1) {
-            setElements([e.target.value, ...elements])
+            setElements([{ id, value }, ...elements])
         }
     }
 
@@ -36,7 +40,7 @@ export function SelectWithBadges(props) {
     }
 
     useEffect(() => {
-        setValue(props.name, elements[0] ?? "default")
+        setValue(props.name, elements[0]?.id ?? "default")
     }, [elements])
 
     return (
@@ -47,7 +51,7 @@ export function SelectWithBadges(props) {
                 </option>
                 {
                     props.items.map(item => {
-                        return <option key={item.id} value={item.value}>{item.value}</option>
+                        return <option key={item.id} value={item.id}>{item.value}</option>
                     })
                 }
             </select>
@@ -59,7 +63,7 @@ export function SelectWithBadges(props) {
                                 X
                                 <span className="visually-hidden">delete element</span>
                             </span>
-                            <span>{elem}</span>
+                            <span>{elem.value}</span>
                         </span>)
                     })
                 }
