@@ -1,5 +1,5 @@
 import React from 'react'
-import { CloudImage, Multileveldropdown, Dropdown } from 'banana-pattern-library'
+import { CloudImage, Multileveldropdown, Dropdown, SelectWithBadges } from 'banana-pattern-library'
 
 import 'banana-pattern-library/dist/index.css'
 
@@ -57,6 +57,19 @@ const App = () => {
               <span>ffdf</span>,
               <span>sdsd</span>
             ]}
+          />
+        </div>
+        <div className={`col-sm-6 text-secondary d-flex`}>
+          <SelectWithBadges items={
+            [
+              { value: 'gardening', id: 'g3' },
+              { value: 'outdoor', id: 'fe' },
+              { value: 'indoor', id: '4fff' },
+              { value: 'living room', id: 'sdd33' },
+              { value: 'furniture', id: 'eede' }
+            ]}
+            registerFn={() => { }}
+            setValueFn={() => { }}
           />
         </div>
       </div>
