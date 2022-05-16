@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react'
-import { Debounce } from '../Util'
+import { Debounce } from '../../Shared/Util'
 import styles from './inputwithsuggestion.module.css'
 
-export function InputWithSuggestion (props) {
+export default function InputWithSuggestion(props) {
 
     const [suggestions, setSuggestions] = useState([])
     const [selectedSuggestion, setSelectedSuggestion] = useState({})
@@ -11,10 +11,10 @@ export function InputWithSuggestion (props) {
     const setValue = props.setValueFn
 
     const onChange = (search) => {
-        return props.onChangeFn(search)
+        return search ? props.onChangeFn(search)
             .then((data) => {
                 setSuggestions(data.suggestions)
-            })
+            }) : setSuggestions([])
     }
 
     const debouncedFn = useCallback(Debounce(onChange, 1000), [])
@@ -25,8 +25,12 @@ export function InputWithSuggestion (props) {
     }
 
     useEffect(() => {
-        setValue(props.name, selectedSuggestion.label)
+        setValue(props.name, selectedSuggestion?.label)
     }, [selectedSuggestion])
+
+    useEffect(() => {
+        if (props.value) setSelectedSuggestion(props.value)
+    }, [])
 
     return (
         <div className={`${styles.inputSuggestion}`}>
