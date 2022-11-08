@@ -30,7 +30,7 @@ export function Dropdown({ title, items, id, rootClassName, liClassName, ulClass
             <ul className={ulClassName}>
                 {
                     items.map((elem, index) => {
-                        return (<li className={liClassName} key={index}>{elem}</li>)
+                        return (<li className={`${styles.liBaseClassName} ${liClassName}`} key={index}>{elem}</li>)
                     })
                 }
             </ul>

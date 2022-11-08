@@ -41,3 +41,12 @@
  .ui_dropdown input[type="checkbox"]:checked ~ ul{
    left: 0;
  }
+
+ .liBaseClassName {
+  padding: .5rem;
+}
+
+.liBaseClassName:hover {
+  color: #1e2125;
+  background-color: #e9ecef;
+}
