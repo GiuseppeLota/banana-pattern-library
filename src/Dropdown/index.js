@@ -23,11 +23,11 @@ export function Dropdown({ title, items, id, rootClassName, liClassName, ulClass
 
     return (
         <div className={`dropdown ${styles.ui_dropdown} ${rootClassName}`} ref={divRef}>
-            <input id={id} name="my-checkbox" type="checkbox" value="" />
+            <input id={id} name="my-checkbox" type="checkbox" className={styles.drp_check} value="" />
             <label className={`${labelClassName}`} data-toggle="dropdown" htmlFor={id}>
                 {title}
             </label>
-            <ul className={ulClassName}>
+            <ul className={`${ulClassName} ${styles.drp_ul}`}>
                 {
                     items.map((elem, index) => {
                         return (<li className={`${styles.liBaseClassName} ${liClassName}`} key={index}>{elem}</li>)

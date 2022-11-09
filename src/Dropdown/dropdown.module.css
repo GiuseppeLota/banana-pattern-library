@@ -2,7 +2,7 @@
 *   Dropdown
 */
 
-.ui_dropdown > input[type="checkbox"] {
+.ui_dropdown > .drp_check {
     position: absolute;
     left: -100vw;
   }
@@ -21,7 +21,7 @@
    border-color: #333;
  }
  
- .ui_dropdown > ul {
+ .ui_dropdown > .drp_ul {
    position: absolute;
    left: -100vw;
    top: calc(1.5em + 14px);
@@ -38,7 +38,7 @@
    z-index: 1;
  }
  
- .ui_dropdown input[type="checkbox"]:checked ~ ul{
+ .ui_dropdown .drp_check:checked ~ ul{
    left: 0;
  }
 
